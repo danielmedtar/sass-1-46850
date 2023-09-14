@@ -1,0 +1,94 @@
+.icono-texto img {
+    width: 70px;
+}
+
+/*FILTRO*/
+#saladas, #dulces, #todas {
+    display: none;
+}
+
+.salada, .dulce {
+    display: none;
+}
+
+#saladas:checked ~ .container-cards .salada,
+#dulces:checked ~ .container-cards .dulce {
+    display: flex;
+}
+
+#todas:checked ~ .container-cards .salada,
+#todas:checked ~ .container-cards .dulce {
+    display: flex;
+}
+
+/*CON SINTAXIS CSS NORMAL*/
+.container-opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (min-width: 560px) {
+    .container-opciones {
+        flex-direction: row;
+    }
+}
+
+.container-opciones label {
+    border: solid 1px;
+    padding: 8px 15px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container-opciones label:hover {
+    background-color: $color-secundario;
+    border: none;
+}
+
+#saladas:checked ~ .container-opciones .label-saladas,
+#dulces:checked ~ .container-opciones .label-dulces,
+#todas:checked ~ .container-opciones .label-todas {
+    background-color: $color-secundario;
+}
+
+/*CON SINTAXIS SASS*/
+.container-opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    label {
+        border: solid 1px;
+        padding: 8px 15px;
+        width: 150px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-secundario;
+            border: none;
+        }
+    }
+}
+
+@media (min-width: 560px) {
+    .container-opciones {
+        flex-direction: row;
+    }
+}
+
+/*OPERACIONES*/
+/*para suma = +
+Para resta = -
+Para multiplicar = *
+Para dividir = calc(variable / valor)
+*/
+h2 {
+    font-size: calc($size-h1 / 2);
+}

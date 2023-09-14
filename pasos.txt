@@ -1,0 +1,17 @@
+Comandos: Los pasos 1, 2 y 3 solo se aplican cuando instalamos por primera vez en cada proyecto. Despues no se vuelven a ejecutar.
+
+1. npm init
+
+2. Teclear enter hasta llegar a la pregunta Is this Ok? y escribir yes.
+
+3. npm install -g sass
+
+4. sass --watch scss:css
+
+5. Para cerrar la consola, presionar CTRL + C
+
+6. Para retomar el código con sass, solo escribir el comando numero 4.
+
+7. A LOS HTML SOLO SE DEBEN LINKEAR EL ARCHIVO CSS. 
+
+NOOO SE LINKEAN LOS SASS

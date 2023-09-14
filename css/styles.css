@@ -1,0 +1,183 @@
+/*DENTRO DEL IMPORT NO HACE FALTA EL _ NI EL .SCSS*/
+/*PALETAS DE COLORES*/
+/*FUENTES*/
+body {
+  background-color: #c79d4e;
+}
+
+header {
+  background-color: #cecece;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .container-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card {
+  max-width: 100%;
+}
+
+.card-img-top {
+  height: 300px;
+}
+
+.bi {
+  font-size: 3rem;
+}
+
+.bi-instagram {
+  color: rgb(230, 70, 70);
+}
+
+.bi-tiktok {
+  color: #000;
+}
+
+.bi-youtube {
+  color: red;
+}
+
+.carousel-item img {
+  height: 45vh;
+}
+
+@media (min-width: 520px) {
+  .carousel-item img {
+    height: 50vh;
+  }
+}
+@media (min-width: 768px) {
+  .carousel-item img {
+    height: 70vh;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-item img {
+    height: 80vh;
+  }
+  #carouselExampleFade {
+    width: 70%;
+  }
+}
+.icono-texto img {
+  width: 70px;
+}
+
+/*FILTRO*/
+#saladas, #dulces, #todas {
+  display: none;
+}
+
+.salada, .dulce {
+  display: none;
+}
+
+#saladas:checked ~ .container-cards .salada,
+#dulces:checked ~ .container-cards .dulce {
+  display: flex;
+}
+
+#todas:checked ~ .container-cards .salada,
+#todas:checked ~ .container-cards .dulce {
+  display: flex;
+}
+
+/*CON SINTAXIS CSS NORMAL*/
+.container-opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (min-width: 560px) {
+  .container-opciones {
+    flex-direction: row;
+  }
+}
+.container-opciones label {
+  border: solid 1px;
+  padding: 8px 15px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container-opciones label:hover {
+  background-color: #cecece;
+  border: none;
+}
+
+#saladas:checked ~ .container-opciones .label-saladas,
+#dulces:checked ~ .container-opciones .label-dulces,
+#todas:checked ~ .container-opciones .label-todas {
+  background-color: #cecece;
+}
+
+/*CON SINTAXIS SASS*/
+.container-opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.container-opciones label {
+  border: solid 1px;
+  padding: 8px 15px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+.container-opciones label:hover {
+  background-color: #cecece;
+  border: none;
+}
+
+@media (min-width: 560px) {
+  .container-opciones {
+    flex-direction: row;
+  }
+}
+/*OPERACIONES*/
+/*para suma = +
+Para resta = -
+Para multiplicar = *
+Para dividir = calc(variable / valor)
+*/
+h2 {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
